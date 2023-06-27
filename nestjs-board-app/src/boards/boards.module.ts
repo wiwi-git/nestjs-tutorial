@@ -3,12 +3,12 @@ import { BoardsController } from './boards.controller';
 import { BoardsService } from './boards.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BoardRepository } from './board.repository';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
-  // providers에 repository 추가했으면 된거같은데 왜 이걸 넣어야할까 빼면 어떻게 됨? 잘되네... 문제없다
-  // imports: [
-  //   TypeOrmModule.forFeature([Board])
-  // ],
+  imports: [
+    AuthModule
+  ],
   controllers: [BoardsController],
   providers: [
     BoardsService,

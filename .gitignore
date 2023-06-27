@@ -1,0 +1,11 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# complie
+/**/dist/
+
+# libray
+/**/node_modules/
